@@ -1,0 +1,745 @@
+/* ================================
+   PREMIUM ROMANTIC BIRTHDAY WEBSITE
+   Beautiful, Elegant, Polished
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fef5f7 0%, #fff9fb 50%, #f8e8f0 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(255, 192, 203, 0.15), transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(255, 182, 193, 0.12), transparent 40%);
+    z-index: -1;
+}
+
+/* ================================
+   CONTAINERS & LAYOUT
+   ================================ */
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 30px 70px rgba(255, 105, 180, 0.18),
+        0 8px 25px rgba(0, 0, 0, 0.06);
+    animation: fadeUp 0.9s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 10vw, 72px);
+    background: linear-gradient(135deg, #ff3d7f 0%, #ff6699 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    text-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: clamp(28px, 6vw, 36px);
+    color: #ff6699;
+    text-align: center;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: clamp(18px, 4vw, 22px);
+    color: #ff8fb3;
+    text-align: center;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+}
+
+/* ================================
+   BUTTONS - PREMIUM STYLE
+   ================================ */
+
+button {
+    background: linear-gradient(135deg, #ff4d88 0%, #ff85b3 100%);
+    color: white;
+    padding: 16px 42px;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 12px 35px rgba(255, 105, 180, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 45px rgba(255, 105, 180, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+    transform: translateY(-3px);
+}
+
+/* ================================
+   INPUT FIELDS - PREMIUM STYLE
+   ================================ */
+
+input {
+    width: 280px;
+    max-width: 100%;
+    padding: 16px 22px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 2px solid #ffb3cf;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+input:focus {
+    border-color: #ff5f95;
+    box-shadow:
+        0 0 20px rgba(255, 105, 180, 0.4),
+        inset 0 0 0 3px rgba(255, 192, 203, 0.1);
+    transform: scale(1.02);
+}
+
+input::placeholder {
+    color: #ffb3cf;
+}
+
+/* ================================
+   GIFT - INTERACTIVE
+   ================================ */
+
+.gift {
+    font-size: 140px;
+    cursor: pointer;
+    animation: bounce 2.5s cubic-bezier(0.36, 0, 0.66, 1) infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.15));
+    display: inline-block;
+}
+
+.gift:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 30px 50px rgba(255, 105, 180, 0.3));
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+/* ================================
+   PHOTOS & GALLERY - PREMIUM
+   ================================ */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 10px solid white;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.15),
+        0 0 30px rgba(255, 105, 180, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.2),
+        0 0 40px rgba(255, 105, 180, 0.2);
+}
+
+/* ================================
+   DAILY MESSAGE CARD
+   ================================ */
+
+#dailyMessage {
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    font-size: 18px;
+    line-height: 1.9;
+    box-shadow:
+        0 15px 40px rgba(255, 105, 180, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    max-width: 650px;
+    margin: 25px auto;
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================================
+   SLIDESHOW - BEAUTIFUL PHOTOS
+   ================================ */
+
+.slideshow {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2),
+        0 0 40px rgba(255, 105, 180, 0.12);
+    border: 8px solid white;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 1.2s ease;
+}
+
+.slideshow p {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff4d88;
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   LOVE LETTER - ROMANTIC
+   ================================ */
+
+.loveLetter {
+    background: linear-gradient(to bottom, #fffdf8, #fff9f5);
+    background-image:
+        linear-gradient(transparent 94%, #f2dcdc 94%);
+    background-size: 100% 40px;
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 45px;
+    border-radius: 28px;
+    box-shadow:
+        0 20px 50px rgba(255, 105, 180, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    text-align: left;
+    line-height: 2;
+    border: 1px solid rgba(255, 192, 203, 0.2);
+    animation: slideInLetter 0.9s ease-out;
+}
+
+@keyframes slideInLetter {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.loveLetter p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: center;
+    color: #4a3b3b;
+    white-space: pre-line;
+    letter-spacing: 0.8px;
+}
+
+.loveLetter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    text-align: center;
+    color: #ff4d88;
+    margin-bottom: 30px;
+}
+
+/* ================================
+   ENVELOPE - PREMIUM ANIMATION
+   ================================ */
+
+.envelope {
+    width: 520px;
+    max-width: 95%;
+    height: 360px;
+    margin: 60px auto;
+    position: relative;
+    cursor: pointer;
+    perspective: 1200px;
+    transition: all 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.02);
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8d7df 0%, #f5c8d8 100%);
+    border-radius: 15px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 0 30px rgba(255, 105, 180, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 170px;
+    background: linear-gradient(135deg, #efc2ce 0%, #ebb8c7 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cover::after {
+    content: "🐻❤️🐰";
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #d94a6c 0%, #c73a5a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.letterPaper {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+    width: 82%;
+    height: 430px;
+    background: linear-gradient(to bottom, #fffdf7, #fff9f5);
+    border-radius: 20px;
+    padding: 30px;
+    overflow-y: auto;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letterPaper {
+    transform: translate(-50%, -250px);
+    z-index: 8;
+}
+
+.envelope::before {
+    content: "✨ ✨ ❤️ ✨ ✨";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    animation: sparkle 2.5s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: translateX(-50%) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+/* ================================
+   CAKE PAGE - CELEBRATORY
+   ================================ */
+
+.birthdayTitle {
+    font-size: 48px;
+    color: #ff4f8b;
+    animation: glowPulse 2.5s ease-in-out infinite;
+    letter-spacing: 1px;
+}
+
+.wishText {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #666;
+    font-weight: 500;
+}
+
+.cakeContainer {
+    margin-top: 40px;
+    animation: floatCake 3.5s cubic-bezier(0.36, 0, 0.66, 1) infinite;
+    text-align: center;
+}
+
+.cakeImage {
+    width: 320px;
+    max-width: 90%;
+    transition: all 0.6s ease;
+    filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.2));
+}
+
+.blowButton {
+    margin-top: 40px;
+    padding: 18px 50px;
+    font-size: 18px;
+}
+
+@keyframes floatCake {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 77, 136, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 77, 136, 0.8);
+    }
+}
+
+/* ================================
+   FINAL PAGE - CELEBRATION
+   ================================ */
+
+#finalPage p {
+    font-size: 20px;
+    line-height: 2;
+    color: #555;
+    max-width: 650px;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow:
+        0 15px 40px rgba(255, 105, 180, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+}
+
+/* ================================
+   MUSIC BUTTON - FLOATING
+   ================================ */
+
+#musicBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 50px;
+    padding: 14px 22px;
+    z-index: 9999;
+    background: linear-gradient(135deg, #ff4d88, #ff85b3);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4);
+    animation: floatBtn 3s ease-in-out infinite;
+}
+
+@keyframes floatBtn {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ================================
+   HIDDEN & UTILITY
+   ================================ */
+
+.hidden {
+    display: none !important;
+}
+
+/* ================================
+   RESPONSIVE DESIGN - MOBILE
+   ================================ */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 30px auto;
+        padding: 35px 25px;
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    button {
+        padding: 14px 32px;
+        font-size: 13px;
+    }
+
+    input {
+        width: 90%;
+        padding: 14px 18px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .gallery img {
+        height: 280px;
+        border: 8px solid white;
+    }
+
+    #dailyMessage {
+        padding: 25px;
+        font-size: 16px;
+        margin: 20px auto;
+    }
+
+    .slideshow {
+        border: 6px solid white;
+    }
+
+    .slideshow img {
+        height: 400px;
+    }
+
+    .loveLetter {
+        padding: 30px 25px;
+    }
+
+    .loveLetter p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .loveLetter h2 {
+        font-size: 32px;
+    }
+
+    .envelope {
+        width: 90%;
+        height: 280px;
+        margin: 40px auto;
+    }
+
+    .letterPaper {
+        height: 350px;
+        padding: 20px;
+    }
+
+    .envelope.open .letterPaper {
+        transform: translate(-50%, -200px);
+    }
+
+    #finalPage p {
+        font-size: 17px;
+        padding: 25px;
+        line-height: 1.8;
+    }
+
+    #musicBtn {
+        right: 15px;
+        bottom: 15px;
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+
+    .gift {
+        font-size: 100px;
+    }
+
+    .cakeImage {
+        width: 240px;
+    }
+
+    .birthdayTitle {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 97%;
+        padding: 25px 18px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .envelope {
+        height: 240px;
+    }
+
+    .gift {
+        font-size: 80px;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY & POLISHING
+   ================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 192, 203, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff4d88, #ff85b3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff3d7f, #ff75a3);
+}
+
+/* ================================
+   FLOATING HEARTS BACKGROUND
+   ================================ */
+
+body::before {
+    content: "❤️ 🌸 💕 🌸 ❤️";
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    font-size: 32px;
+    opacity: 0.15;
+    animation: floatHearts 10s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatHearts {
+    from {
+        transform: translateY(100vh) rotateZ(0deg);
+    }
+    to {
+        transform: translateY(-100vh) rotateZ(360deg);
+    }
+}

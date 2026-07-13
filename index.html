@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Birthday Surprise ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- 🔒 PASSCODE -->
+
+<div id="lock" class="container">
+
+
+<h1>
+🔒 Birthday Surprise
+</h1>
+
+
+<h2>
+🐻 ❤️ 🐰
+</h2>
+
+
+<h3>
+⏳ Countdown To 8 August
+</h3>
+
+
+<h2 id="countdown">
+Loading...
+</h2>
+
+
+<p>
+Enter Secret Code
+</p>
+
+
+<input id="password" type="password">
+
+
+<br><br>
+
+
+<button onclick="checkPassword()">
+
+Unlock ❤️
+
+</button>
+
+</div>
+
+
+
+	
+
+<!-- 🌸 HOME -->
+
+
+<div id="home" class="container" style="display:none;">
+
+
+<h1>
+🌸 Happy Birthday My Love 🌸
+</h1>
+
+
+<h2>
+🐻🐰🐥
+</h2>
+
+
+<p id="dailyMessage">
+
+Your daily love message will appear here ❤️
+
+</p>
+
+
+
+<h2>
+Open Your Gift 🎁
+</h2>
+
+
+
+<div id="gift" class="gift" onclick="openGift()">
+
+🎁
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- 🎵 MUSIC -->
+
+
+<audio id="bgMusic" loop hidden>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+<!-- 📸 PHOTO MEMORY PAGE -->
+
+<div id="photoSection" class="container" style="display:none;">
+
+<h1>📸 Our Beautiful Memories ❤️</h1>
+
+<div class="slideshow">
+
+    <img id="dailyPhoto" src="" alt="Memory">
+
+    <p id="photoCaption"></p>
+
+</div>
+
+<br>
+
+<button onclick="showLetter()">
+Continue Our Story ❤️ 💌
+</button>
+
+</div>
+
+<!-- 🎂 CAKE PAGE -->
+
+<div id="cakePage" class="container" style="display:none;">
+
+    <h1 class="birthdayTitle">
+        🎉 Happy Birthday Vishal ❤️
+    </h1>
+
+    <p class="wishText">
+        Close your eyes and make a wish... ✨
+    </p>
+
+    <div class="cakeContainer">
+
+        <img id="cake" src="cake.png" class="cakeImage">
+
+    </div>
+
+    <button class="blowButton" onclick="blowCandle()">
+        ✨ Make A Wish
+    </button>
+
+
+</div>
+
+
+<!-- 💌 BIRTHDAY LETTER -->
+
+<div id="birthdayLetter" class="container" style="display:none;">
+
+<h1>
+💌 Happy Birthday Vishal ❤️
+</h1>
+
+<div id="envelope" class="envelope" onclick="openEnvelope()">
+
+    <div class="flap"></div>
+
+    <div class="cover"></div>
+
+    <div class="letterPaper">
+
+        <div class="loveLetter">
+
+            <p id="birthdayLetterText">
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ❤️ FINAL PAGE -->
+
+
+<div id="finalPage" class="container" style="display:none;">
+
+
+<h1>
+
+🎆 Happy Birthday My Love ❤️
+
+</h1>
+
+
+<h2>
+
+🎉🎊🎉🎊
+
+</h2>
+
+
+<p>
+
+
+You are my favourite person.
+
+<br><br>
+
+Thank you for coming into my life.
+
+<br><br>
+
+No distance can change what you mean to me.
+
+<br><br>
+
+I love you forever ❤️
+
+
+</p>
+
+
+
+
+
+<button id="musicBtn"
+
+style="
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+border-radius:50px;
+
+padding:12px 18px;
+
+
+
+z-index:9999;
+
+"
+
+onclick="toggleMusic()">
+
+🎵 Music
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
