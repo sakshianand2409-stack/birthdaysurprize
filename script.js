@@ -409,6 +409,18 @@ function createConfetti(){
  "🎉🎊✨❤️🎉🎊✨❤️";
 
 
+ confetti.style.cssText = `
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 60px;
+     opacity: 1;
+     z-index: 8000;
+     animation: confettiFall 3s ease-out forwards;
+     pointer-events: none;
+ `;
+
  document.body.appendChild(confetti);
 
 
@@ -421,6 +433,22 @@ function createConfetti(){
 
 
  }
+
+// Add confetti animation to CSS
+const confettiStyle = document.createElement('style');
+confettiStyle.textContent = `
+     @keyframes confettiFall {
+         0% {
+             opacity: 1;
+             transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
+         }
+         100% {
+             opacity: 0;
+             transform: translate(-50%, 400px) scale(0.5) rotateZ(360deg);
+         }
+     }
+`;
+document.head.appendChild(confettiStyle);
 
 
 
@@ -603,31 +631,16 @@ function openEnvelope(){
      document
      .getElementById("envelope")
      .classList.add("open");
+     
+     // Trigger final page after letter opens
+     setTimeout(function(){
+         document.getElementById("birthdayLetter").style.display="none";
+         document.getElementById("finalPage").style.display="block";
+         createConfetti();
+     }, 3000);
 
  }
 
-
-function toggleMusic(){
-
- const music=document.getElementById("bgMusic");
-
- if(music.paused){
-
- music.play();
-
- document.getElementById("musicBtn").innerHTML="🔊 Playing";
-
- }
-
- else{
-
- music.pause();
-
- document.getElementById("musicBtn").innerHTML="🎵 Music";
-
- }
-
- }
 
 const photos = [
 
@@ -730,8 +743,6 @@ function showDailyPhoto() {
  }
 
 // 📸 Photo Gallery - On August 8 (Birthday)
-// FIXED: Changed from photos/ to photo/ folder
-// FIXED: Added gallery rendering for birthday
 
 function showPhotoGallery() {
 
