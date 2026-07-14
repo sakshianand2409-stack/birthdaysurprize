@@ -11,6 +11,7 @@ function checkPassword(){
 <h2>✨✨✨</h2>
 `;
 
+ document.getElementById("lock").style.animation = "fadeUp 0.9s ease-out";
  setTimeout(function(){
 
  document.getElementById("lock").style.display="none";
@@ -34,50 +35,47 @@ function checkPassword(){
 
 // 🎵 INTELLIGENT AUDIO SELECTION LOGIC
 // Before 8 August: birthday.mp3
-// On 8 August: happybdaysong.mp3
-// After 8 August: continue existing behavior
+// On 8 August (after unlock): happybdaysong.mp3
+// After 8 August: birthday.mp3
 
 function playBirthdayAudio() {
      const music = document.getElementById("bgMusic");
      const today = new Date();
      
-     // Get current date (month = 0-11, so August = 7)
      const currentMonth = today.getMonth();
      const currentDate = today.getDate();
-     const currentYear = today.getFullYear();
      
-     // August 8, 2026 reference date
-     const birthdayMonth = 7; // August
+     const birthdayMonth = 7;
      const birthdayDate = 8;
      
-     let audioFile = "birthday.mp3"; // Default
+     let audioFile = "birthday.mp3";
      
-     // Determine which audio to play
      if (currentMonth < birthdayMonth) {
-         // Before August - play birthday.mp3
          audioFile = "birthday.mp3";
      } else if (currentMonth === birthdayMonth) {
-         // August
          if (currentDate === birthdayDate) {
-             // Exactly August 8 - play the special birthday song
              audioFile = "happybdaysong.mp3";
          } else if (currentDate < birthdayDate) {
-             // Before August 8 - play birthday.mp3
              audioFile = "birthday.mp3";
          } else {
-             // After August 8 - continue with existing behavior
              audioFile = "birthday.mp3";
          }
      } else {
-         // After August - continue existing behavior
          audioFile = "birthday.mp3";
      }
      
-     // Set the audio source and play
      music.src = audioFile;
-     music.play().catch(function(error){
-         console.log("Audio play error:", error);
-     });
+     music.volume = 0.5;
+     
+     const playPromise = music.play();
+     
+     if (playPromise !== undefined) {
+         playPromise.catch(function(error){
+             console.log("Audio play (autoplay may be blocked):", error);
+         });
+     }
+     
+     console.log("Playing:", audioFile);
  }
 
 // 📅 Date Helpers
@@ -90,7 +88,7 @@ function todayOnly() {
 
 function getDaysLeft() {
 
-     const birthday = new Date(2026, 7, 8); // August = 7
+     const birthday = new Date(2026, 7, 8);
      birthday.setHours(0, 0, 0, 0);
 
      return Math.round((birthday - todayOnly()) / 86400000);
@@ -300,7 +298,6 @@ function openGift(){
 
      if(daysLeft <= 0){
 
-         // 🎂 Birthday day - show photo gallery
          document.getElementById("photoSection").style.display="block";
          showPhotoGallery();
 
@@ -308,7 +305,6 @@ function openGift(){
 
      else{
 
-         // Before birthday - show single daily photo
          document.getElementById("photoSection").style.display="block";
          showDailyPhoto();
 
@@ -451,19 +447,49 @@ confettiStyle.textContent = `
 document.head.appendChild(confettiStyle);
 
 
+// 🎆 GRAND CELEBRATION EFFECTS
+
+function createCelebrationSparkles() {
+    const effectsContainer = document.getElementById("celebrationEffects");
+    if (!effectsContainer) return;
+    
+    const sparkles = ["✨", "💫", "⭐", "🌟", "❤️", "💖", "🎉", "🎊"];
+    
+    for (let i = 0; i < 30; i++) {
+        setTimeout(function() {
+            const sparkle = document.createElement("div");
+            sparkle.className = "celebration-sparkle";
+            sparkle.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+            
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+            
+            const tx = (Math.random() - 0.5) * 400;
+            const ty = (Math.random() - 0.5) * 400 - 300;
+            
+            sparkle.style.left = startX + "px";
+            sparkle.style.top = startY + "px";
+            sparkle.style.setProperty("--tx", tx + "px");
+            sparkle.style.setProperty("--ty", ty + "px");
+            
+            effectsContainer.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }, i * 60);
+    }
+}
 
 // ❤️ FINAL PAGE
 
 function showFinal(){
 
-
  document.getElementById("cakePage")
  .style.display="none";
-
 
  document.getElementById("finalPage")
  .style.display="block";
 
+ createCelebrationSparkles();
 
  }
 
@@ -632,12 +658,12 @@ function openEnvelope(){
      .getElementById("envelope")
      .classList.add("open");
      
-     // Trigger final page after letter opens
      setTimeout(function(){
          document.getElementById("birthdayLetter").style.display="none";
          document.getElementById("finalPage").style.display="block";
          createConfetti();
-     }, 3000);
+         createCelebrationSparkles();
+     }, 3500);
 
  }
 
@@ -711,7 +737,6 @@ const captions=[
 
  ];
 
-// 📸 Slideshow
 // 📸 Daily Photo - Before August 8
 
 function showDailyPhoto() {
@@ -729,7 +754,6 @@ function showDailyPhoto() {
 
      const daysLeft = Math.round((birthday - today) / 86400000);
 
-     // 30 days before birthday → photo1
      let index = 30 - daysLeft;
 
      if(index < 0) index = 0;
@@ -750,29 +774,32 @@ function showPhotoGallery() {
      
      if (!photoSection) return;
 
-     // Clear existing content
      photoSection.innerHTML = `
          <h1>📸 Our Beautiful Memories ❤️</h1>
          <div class="gallery" id="galleryContainer"></div>
          <br>
-         <button onclick="showLetter()">
+         <button onclick="showLetterFromGallery()">
              Continue Our Story ❤️ 💌
          </button>
      `;
 
-     // Create gallery with all 20 photos
      const galleryContainer = document.getElementById("galleryContainer");
      
      for (let i = 0; i < photos.length; i++) {
          const photoCard = document.createElement("div");
          photoCard.className = "photoCard";
          photoCard.innerHTML = `
-             <img src="${photos[i]}" alt="Memory ${i + 1}" onerror="console.error('Failed to load: ${photos[i]}')"/>
+             <img src="${photos[i]}" alt="Memory ${i + 1}" onerror="this.style.opacity='0.5'"/>
              <p>${captions[i]}</p>
          `;
          galleryContainer.appendChild(photoCard);
      }
 
-     console.log("Gallery initialized with 20 photos from photo/ folder");
+     console.log("Gallery initialized with 20 photos");
 
+ }
+
+function showLetterFromGallery(){
+     document.getElementById("photoSection").style.display="none";
+     showBirthdayLetter();
  }
