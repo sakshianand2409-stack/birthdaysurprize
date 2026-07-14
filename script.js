@@ -300,15 +300,15 @@ function openGift(){
 
      if(daysLeft <= 0){
 
-         // 🎂 Birthday day cake first
-
-         document.getElementById("cakePage")
-         .style.display="block";
+         // 🎂 Birthday day - show photo gallery
+         document.getElementById("photoSection").style.display="block";
+         showPhotoGallery();
 
      }
 
      else{
 
+         // Before birthday - show single daily photo
          document.getElementById("photoSection").style.display="block";
          showDailyPhoto();
 
@@ -409,18 +409,6 @@ function createConfetti(){
  "🎉🎊✨❤️🎉🎊✨❤️";
 
 
- confetti.style.cssText = `
-     position: fixed;
-     left: 50%;
-     top: 50%;
-     transform: translate(-50%, -50%);
-     font-size: 60px;
-     opacity: 1;
-     z-index: 8000;
-     animation: confettiFall 3s ease-out forwards;
-     pointer-events: none;
- `;
-
  document.body.appendChild(confetti);
 
 
@@ -433,22 +421,6 @@ function createConfetti(){
 
 
  }
-
-// Add confetti animation to CSS
-const confettiStyle = document.createElement('style');
-confettiStyle.textContent = `
-     @keyframes confettiFall {
-         0% {
-             opacity: 1;
-             transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
-         }
-         100% {
-             opacity: 0;
-             transform: translate(-50%, 400px) scale(0.5) rotateZ(360deg);
-         }
-     }
-`;
-document.head.appendChild(confettiStyle);
 
 
 
@@ -631,13 +603,6 @@ function openEnvelope(){
      document
      .getElementById("envelope")
      .classList.add("open");
-     
-     // Trigger final page after letter opens
-     setTimeout(function(){
-         document.getElementById("birthdayLetter").style.display="none";
-         document.getElementById("finalPage").style.display="block";
-         createConfetti();
-     }, 3000);
 
  }
 
@@ -666,26 +631,26 @@ function toggleMusic(){
 
 const photos = [
 
- "photos/photo1.jpg",
- "photos/photo2.jpg",
- "photos/photo3.jpg",
- "photos/photo4.jpg",
- "photos/photo5.jpg",
- "photos/photo6.jpg",
- "photos/photo7.jpg",
- "photos/photo8.jpg",
- "photos/photo9.jpg",
- "photos/photo10.jpg",
- "photos/photo11.jpg",
- "photos/photo12.jpg",
- "photos/photo13.jpg",
- "photos/photo14.jpg",
- "photos/photo15.jpg",
- "photos/photo16.jpg",
- "photos/photo17.jpg",
- "photos/photo18.jpg",
- "photos/photo19.jpg",
- "photos/photo20.jpg"
+ "photo/photo1.jpg",
+ "photo/photo2.jpg",
+ "photo/photo3.jpg",
+ "photo/photo4.jpg",
+ "photo/photo5.jpg",
+ "photo/photo6.jpg",
+ "photo/photo7.jpg",
+ "photo/photo8.jpg",
+ "photo/photo9.jpg",
+ "photo/photo10.jpg",
+ "photo/photo11.jpg",
+ "photo/photo12.jpg",
+ "photo/photo13.jpg",
+ "photo/photo14.jpg",
+ "photo/photo15.jpg",
+ "photo/photo16.jpg",
+ "photo/photo17.jpg",
+ "photo/photo18.jpg",
+ "photo/photo19.jpg",
+ "photo/photo20.jpg"
 
  ];
 
@@ -734,7 +699,7 @@ const captions=[
  ];
 
 // 📸 Slideshow
-// 📸 Daily Photo
+// 📸 Daily Photo - Before August 8
 
 function showDailyPhoto() {
 
@@ -761,5 +726,42 @@ function showDailyPhoto() {
 
      photo.src = photos[index];
      caption.innerHTML = captions[index];
+
+ }
+
+// 📸 Photo Gallery - On August 8 (Birthday)
+// FIXED: Changed from photos/ to photo/ folder
+// FIXED: Added gallery rendering for birthday
+
+function showPhotoGallery() {
+
+     const photoSection = document.getElementById("photoSection");
+     
+     if (!photoSection) return;
+
+     // Clear existing content
+     photoSection.innerHTML = `
+         <h1>📸 Our Beautiful Memories ❤️</h1>
+         <div class="gallery" id="galleryContainer"></div>
+         <br>
+         <button onclick="showLetter()">
+             Continue Our Story ❤️ 💌
+         </button>
+     `;
+
+     // Create gallery with all 20 photos
+     const galleryContainer = document.getElementById("galleryContainer");
+     
+     for (let i = 0; i < photos.length; i++) {
+         const photoCard = document.createElement("div");
+         photoCard.className = "photoCard";
+         photoCard.innerHTML = `
+             <img src="${photos[i]}" alt="Memory ${i + 1}" onerror="console.error('Failed to load: ${photos[i]}')"/>
+             <p>${captions[i]}</p>
+         `;
+         galleryContainer.appendChild(photoCard);
+     }
+
+     console.log("Gallery initialized with 20 photos from photo/ folder");
 
  }
