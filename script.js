@@ -219,7 +219,7 @@ let messages=[
 
  "❤️ 14 days to go.<br><br>I hope one day you see yourself the way I see you.",
 
- "❤️ 13 days to go.<br><br>Today's answer: your heart is much softer than you pretend.",
+ "❤️ 13 days to go.<br><br>Do you know what's funny? The day I first saw you, I had absolutely no idea that one day I'd be writing letters about you. You were just another person in the office, and I was just another employee trying to survive another workday. If someone had told me that this same person would slowly become the reason behind my smiles, my overthinking, my happiness, and even my tears, I would've laughed and said, Not possible. But life has always been better at writing stories than we are.",
 
  "❤️ 12 days to go.<br><br>Sometimes I wonder if you remember the first day we met. I do. It was just another ordinary day in the office, another routine morning that I thought would be like every other day. I had no idea that among so many people, there was one person who would quietly change my life forever. If someone had told me then that one day you would become the person my heart would always search for, I would have laughed. Life has a beautiful way of introducing us to people without telling us how important they'll become.",
 
