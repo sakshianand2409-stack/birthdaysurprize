@@ -221,29 +221,29 @@ let messages=[
 
  "❤️ 13 days to go.<br><br>Today's answer: your heart is much softer than you pretend.",
 
- "❤️ 12 days to go.<br><br>You're one of the very few people I never have to force myself to remember. You just cross my mind naturally.",
+ "❤️ 12 days to go.<br><br>Sometimes I wonder if you remember the first day we met. I do. It was just another ordinary day in the office, another routine morning that I thought would be like every other day. I had no idea that among so many people, there was one person who would quietly change my life forever. If someone had told me then that one day you would become the person my heart would always search for, I would have laughed. Life has a beautiful way of introducing us to people without telling us how important they'll become.",
 
- "❤️ 11 days to go.<br><br>I still think meeting you was one of those little accidents life got right.",
+ "❤️ 11 days to go.<br><br>At first, we were just colleagues. Our conversations were simple, casual, and probably meaningless to everyone else. But to me, they slowly became the best part of every working day. I started looking forward to seeing you, finding silly reasons to talk to you, and smiling every time our paths crossed. Without realizing it, the office stopped feeling like just a workplace. It became the place where my favourite person was.",
 
- "❤️ 10 days to go. 🎉<br><br>Now we're officially in single digits tomorrow… get ready.",
+ "❤️ 10 days to go. 🎉<br><br>People say home is where you belong. I used to think home was a place. Then you came into my life and quietly proved me wrong. Home became the comfort I felt when I talked to you. It became the peace I found in your presence, the happiness in your smile, and the safety of knowing that somehow everything would be okay if you were beside me. You never tried to become my safe place—you simply became one.",
 
- "❤️ 9 days to go.<br><br>Your birthday is coming… and yes, I have been counting from the beginning. 🤍",
+ "❤️ 9 days to go.<br><br>Your birthday is coming… and yes, I have been counting from the beginning. 🤍I have a complaint against you. Before meeting you, I was perfectly capable of keeping things to myself. Now every tiny thing happens, and my first thought is, I need to tell Vishal. Whether it's good news, bad news, office gossip, or even something completely random, somehow you've become my favourite person to share life with. Honestly... you've spoiled me. Now I don't know how to enjoy anything without thinking, I wish you were here.",
 
- "❤️ 8 days to go.<br><br>You're still my favourite person to annoy.",
+ "❤️ 8 days to go.<br><br>You know what's funny? If someone looked at us from the outside, they'd probably think all we do is argue. Sometimes I wonder how two people can fight over the smallest, most ridiculous things and still find a way back to each other every single time. I still remember all those moments when we'd stop talking because both of us were too stubborn to say sorry first. I would act like I didn't care, but the truth is... I cared a little too much. I'd keep checking my phone, hoping your message would pop up, pretending I wasn't waiting when in reality I was counting every minute. Those fights taught me something I never expected—that I wasn't scared of the arguments, I was scared of the silence. Because life somehow felt incomplete whenever you weren't a part of my day,You're still my favourite person to annoy.",
 
- "❤️ 7 days to go.<br><br>Final week. No escaping my countdown now. 😌",
+ "❤️ 7 days to go.<br><br>Final week. No escaping my countdown now. 😌 Sometimes I sit and wonder how different my life would have been if our paths had never crossed. Honestly... I don't even like imagining that version of my life. Because it wouldn't have your laugh, your random calls, your silly arguments, or those moments when you somehow managed to make me smile even when I had decided I wouldn't. If life asked me to start over, I wouldn't ask for a perfect story. I'd ask for the same office, the same first meeting, the same annoying boy who somehow became my favourite person, and the same journey that slowly taught my heart what home feels like.",
 
- "❤️ 6 days to go.<br><br>Thank you for all the little things you think nobody notices.",
+ "❤️ 6 days to go.<br><br>Do you know what you've done to me? It's honestly unfair. Before meeting you, I used to deal with everything on my own. But now, the moment something good happens, I want to tell you first. The moment something goes wrong, I look for you without even thinking. It's almost like my brain has created a shortcut: 'Need comfort? Go to Vishal.' 😂 I don't even know when that happened. Somewhere between our endless conversations, your terrible jokes, and your constant teasing, you quietly became the person who calms the chaos inside me. You gave direction to thoughts that were falling apart, and somehow your voice became the place where my overthinking finally takes a break.",
 
- "❤️ 5 days to go.<br><br>Maybe what's special about you isn't one big thing… maybe it's a hundred little things.",
+ "❤️ 5 days to go.<br><br>Do you know what scares me the most? It's not our fights. It's not misunderstandings. It's the thought of a day where we stop sharing our lives with each other. Because somewhere along the journey, you've become such an important part of my everyday life that imagining a day without hearing your voice feels... incomplete. Maybe that's when I understood that this wasn't just love anymore. It had become home.",
 
- "❤️ 4 days to go.<br><br>And somehow… I fell in love with every one of those little things.",
+ "❤️ 4 days to go.<br><br>I know I'm not always easy to understand. Sometimes I overthink, sometimes I get emotional over little things, and sometimes I say I'm fine when I am clearly not. Thank you for staying through all those versions of me. Thank you for being patient even when I made it difficult. You never made me feel like I was too much, and that's a feeling I'll always be grateful for.And somehow… I fell in love with every one of those little things.",
 
- "❤️ 3 days to go.<br><br>Almost your birthday… and I'm probably more excited than you. 😂",
+ "❤️ 3 days to go.<br><br>There was a time when seeing you was just a coincidence. Then slowly, it became something I looked forward to every single day. I'd enter the office and, before even settling down, my eyes would unconsciously search for you. It's funny because I didn't even realize I was doing it. My heart had quietly made you part of its daily routine long before my mind understood what was happening",
 
- "❤️ 2 days to go.<br><br>Just two more sleeps… then I get to celebrate my favourite human.",
+ "❤️ 2 days to go.<br><br>Just two more sleeps… then I get to celebrate my favourite human. I don't think you realize how much you've changed me. Before you, I carried everything alone. I overthought everything alone. I celebrated alone. I cried alone. Then you slowly became the person I wanted to tell everything to. You didn't just become someone I loved—you became someone who made life easier to live. And that's one of the greatest gifts anyone has ever given me    ",
 
- "❤️ 1 day to go.<br><br>Tomorrow you'll ask me again, 'Mujhme aisa kya special hai?'<br><br>Tomorrow… I'll answer."
+ "❤️ 1 day to go.<br><br>If one day we both grow old and our hair turns grey, I hope you'll still look at me the way you did in those office corridors. And if anyone ever asks me where my favourite love story began, I won't say it started with a proposal or a date. I'll smile and say... it started on an ordinary office day, with an ordinary conversation, with a boy who had no idea he was about to become my entire world.Tomorrow you'll ask me again, 'Mujhme aisa kya special hai?'<br><br>Tomorrow… I'll answer."
 
  ];
 
